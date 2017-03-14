@@ -1,0 +1,458 @@
+﻿@mixin font ($size:null, $height:null, $family:null, $color:null) {
+	font-size: $size;
+	line-height: $height;
+	font-family: $family;
+	color: $color;
+}
+
+$purple: #5a126c;
+
+h1 {@include font(60px, 40px, "OpenSansBold", #fff)}
+h2 {@include font(48px, 20px, "OpenSansBold", #ff5e3a)} 
+h3 {@include font(36px, 40px, "OpenSansRegular", #0a0a0a)}
+h4 {@include font(18px, 20px, "OpenSansBold", #67267a)}
+h5 {@include font(16px, 30px, "OpenSansSemibold", #666666)}
+h6 {@include font(14px, 20px, "OpenSansBold", #67267a)}
+
+body {
+	@include font(18px, 20px, "OpenSansRegular", #0a0a0a);
+
+}
+
+
+.text-center {
+	text-align: center;
+}
+
+.text-right {
+	text-align: right;
+}
+
+.text-left {
+	text-align: left;
+}
+
+/*********************************** NAV ***********************************/
+	
+	nav {
+		img {
+			margin: 30px auto 0px auto;
+		}
+
+		button.navigation {
+			background-color: transparent;
+			border: none;
+			outline: none;
+			color: $purple;
+			margin-top: 30px;
+			margin-left: auto;
+				&:active {
+					-webkit-transform: translate(2px, 2px);
+					-ms-transform: translate(2px, 2px);
+					-o-transform: translate(2px, 2px);
+					transform: translate(2px, 2px);
+				};
+
+		}
+
+		ul.navig {
+			padding: 0px;
+			margin: 0 auto;
+			margin-top: 25px;
+				li {
+					display: inline;
+					margin-right: 25px;
+						&:last-child {
+							a {
+								color: #67267a;
+								font-family: "OpenSansBold";
+							}	
+						}
+
+						a {
+							padding: 15px;
+							@include font(18px, 48px, "OpenSansRegular", #434343);
+								&:hover, &:active, &:focus {
+									text-decoration: none;
+								};
+								&:hover {
+									color: #ff5f3b;
+								};
+						}
+
+						div.submenu {
+							display: none;
+							border-top: 2px solid #fff0ed;
+							background-color: #fff;
+							padding: 10px;
+							position: absolute;
+							top: 80px;
+							z-index: 10000;
+							left: 170px;
+							box-shadow: 2px 2px 5px;
+							border-radius: 0px 0px 5px 5px;
+								a {
+									display: block;
+									color: #434343;
+									font-family: "OpenSansRegular";
+										&:hover {
+											color: #ff5f3b;
+										}			
+								}
+										
+						}
+				}
+		}
+	}
+/*********************************** NAV ***********************************/
+
+
+
+/*********************************** SLIDER ***********************************/
+	
+	section#slider {
+		margin-top: 25px;
+		overflow: hidden;
+		
+		div.Wallop {
+			div.Wallop-list {
+				div.first, div.second {
+					background: radial-gradient(circle,#763d8b, #550f73);
+
+					div.serversinfo {
+						margin: 0 auto;
+						max-width: 950px;
+						width: 100%;
+						vertical-align: middle;
+							div.leftside {
+								max-width: 540px;
+								max-height: 280px;
+								overflow: hidden;
+								display: inline-block;
+									h1 {
+										padding: 60px 0px 20px 0px;
+										margin: 0 auto;
+									}
+
+									h2 {
+										margin: 25px auto 20px auto;
+										@include font($family: "OpenSansLight", $color:#fff);
+									}
+
+									p {
+										margin: 0px auto 10px auto;
+										@include font(14px, 24px, "OpenSansRegular", #fff);
+											&:nth-child(4) {
+												margin-bottom: 0px;
+											};
+									}
+							}
+
+							div.rightside {
+								margin-top: 80px;
+								float: right;
+								max-width: 400px;
+									ul {
+										padding: 0px;
+										li {
+											list-style-type: none;
+											@include font(18px, 24px, "OpenSansRegular", #bfbdbd);
+												a {
+													color: #fff;
+													@include font($family: "OpenSansBold", $color: #fff);
+												}
+										}
+									}
+
+									button {
+										@include font(18px, 24px, "OpenSansRegular", #fff);
+										background-color: #ff5e3a;
+										padding: 20px 40px;
+										border: none;
+										outline: none;
+										border-radius: 5px;
+											&:active {
+												-webkit-transform: translate(2px, 2px);
+												-ms-transform: translate(2px, 2px);
+												-o-transform: translate(2px, 2px);
+												transform: translate(2px, 2px);
+											}
+									}
+							}
+
+							div.clear {
+								clear: both;
+							}			
+					}
+
+					img {
+						display: block;
+						margin: 0 auto;
+						width: 100%;
+						height: auto;
+						max-width: 1350px;
+					}
+				}
+
+				div.first {
+					background: radial-gradient(circle,#763d8b, #550f73);
+				}
+				div.second {
+					background: radial-gradient(circle,#65e3be, #60a490);
+				}
+						
+			}
+			
+			button.Wallop-buttonPrevious, button.Wallop-buttonNext {
+				position: absolute;
+				top: 50%;
+				z-index: 1000;
+				font-size: 48px;
+				border: none;
+				outline: none;
+				background-color: transparent;
+				color: #fff;
+				opacity: 0.4;
+
+					&:hover, &:active {
+						opacity: 1;
+					}
+
+					&:active {
+						-webkit-transform: translate(2px, 2px);
+						-ms-transform: translate(2px, 2px);
+						-o-transform: translate(2px, 2px);
+						transform: translate(2px, 2px);
+					};
+			}
+
+			button.Wallop-buttonPrevious {
+				left: 5%;
+			}
+
+			button.Wallop-buttonNext {
+				right: 5%;
+			}
+		}
+
+		div#banner {
+			display: none;
+			background-color: #f3f3f3;
+			width: 100%;
+			max-width: 100%;
+			z-index: 10001;
+
+				p {
+					@include font($color: #59126d);
+					margin: 0 auto;
+					padding: 30px 0px 30px 0px;
+					
+					span {
+						margin-right: 10px;
+					}
+
+					a {
+						@include font($family: "OpenSansItalic", $color: #642278);
+						font-weight: bold;
+						text-decoration: none;
+						border-bottom: 1px solid;
+					}
+				}
+		}
+	}
+/*********************************** SLIDER ***********************************/
+
+
+
+/*********************************** INFO ***********************************/
+
+	section#info {
+		overflow: hidden;
+		text-align: center;
+		margin: 60px auto 0px auto;
+
+			h3 {
+				@include font($family: "OpenSansLight");
+				margin: 0 auto;
+			}
+			
+			h3.grow {
+					span {
+						@include font($family: "OpenSansRegular");
+					}
+			}
+
+			div.block {
+				margin: 60px auto 50px auto;
+				background-color: #f3f3f3;
+				max-width: 350px;
+				
+					h4 {
+						@include font(18px, 20px, "OpenSansBold", #67267a);
+						margin: 0 auto;
+						padding: 30px 28px 25px 28px;
+					}
+					hr {
+						margin: 0 auto;
+						width: 160px;
+						border: none;
+						border-bottom: 2px solid #67267a;
+
+					}
+
+					h6 {
+						@include font(12px, 20px, "OpenSansBold", #67267a);
+						margin: 12px auto;
+					}
+
+					h2 {
+						font-size: 48px;
+						margin: 0 auto 40px auto;
+						sup {
+							font-size: 24px;
+						}
+						sub {
+							font-size: 10px;
+							color: #b4b4b4;
+						}
+					}
+
+					h5 {
+						@include font($family: "OpenSansSemibold");
+						margin: 20px auto;
+							
+							span {
+								@include font($family: "OpenSansBold");
+							}
+					}
+
+					button {
+						@include font(18px, 60px, "OpenSansBold", #fff); /*Open sans bold*/
+						background: linear-gradient(#ff5e3a, #a3322e);
+						box-shadow: 5px 5px 5px;
+						border: none;
+						border-radius: 5px;
+						outline: none;
+						max-width: 160px;
+						width: 100%;
+						max-height: 55px;
+						box-shadow: 5px 5px 5px #a3322e;
+						margin: 40px auto 30px auto;
+							&:active {
+								-webkit-transform: translate(2px, 2px);
+								-ms-transform: translate(2px, 2px);
+								-o-transform: translate(2px, 2px);
+								transform: translate(2px, 2px);
+							};
+
+							&:hover {
+								background: linear-gradient(#ff5e3a, #e22f29);
+							};
+					}
+			}
+
+			h3.call {
+				margin: 40px auto 35px auto;
+					a {
+						@include font($family: "OpenSansBold", $color: $purple);
+						text-decoration: none;
+							&:hover, &:active {
+								border-bottom: 2px solid $purple;
+							};
+					}
+			}
+			
+
+
+			hr {
+				width: 160px;
+				display: inline-block;
+				background-color: $purple;
+				height: 1px;
+				margin: 0px auto 5px auto;
+			}
+
+			span.or {
+				@include font(24px, 40px, $family: "OpenSansBold", $color: $purple);
+			}
+
+			h3.email {
+				margin: 25px auto 75px auto;
+					a {
+						@include font($family: "OpenSansBold", $color: $purple);
+						text-decoration: none;
+							&:hover, &:active {
+								border-bottom: 2px solid $purple;
+							};
+					}
+			}
+
+			div.col-lg-6 p {
+				text-align: justify;
+				max-width: 400px;
+			}
+
+			div.col-lg-6.text-right {
+				p {
+					float: right;
+				}
+			}
+			div.col-lg-6.text-left {
+				p {
+					float: left;
+				}
+			}
+
+			h6 {
+				margin: 80px auto 40px auto;
+				@include font($family: "OpenSansBold", $color: #868686);
+			}
+
+			img {
+				margin-bottom: 50px;
+				width: 100%;
+			}
+	}
+/*********************************** INFO ***********************************/
+
+
+
+/*********************************** CONTACTS ***********************************/
+
+	section#contacts {
+		background-color: #f3f3f3;
+
+			h6 {
+				@include font($color: #ff5f3b);
+			}
+
+			p {
+				@include font(14px, 20px, "OpenSansRegular", $color: #434343);
+			}
+
+			ul {
+				margin: 0 auto;
+				padding: 0px;
+					li {
+						@include font(14px, 20px, "OpenSansRegular", $color: #434343);
+						list-style-type: none;
+						margin-bottom: 15px;
+						text-align: left;
+							a {
+								@include font(14px, 20px, "OpenSansBold", $color: #662479);
+							}
+					}
+			}
+	}
+/*********************************** CONTACTS ***********************************/
+
+
+
+/*********************************** FOOTER ***********************************/
+
+	footer {
+		h6 {
+			color: #565656;
+		}
+	}
+/*********************************** FOOTER ***********************************/

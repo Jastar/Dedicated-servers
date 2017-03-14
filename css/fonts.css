@@ -1,0 +1,50 @@
+/* font-family: "OpenSansBold"; */
+@font-face {
+	font-family: "OpenSansBold";
+	src: url("../fonts/OpenSans-Bold/OpenSans-Bold.eot");
+	src: url("../fonts/OpenSans-Bold/OpenSans-Bold.eot?#iefix")format("embedded-opentype"),
+	url("../fonts/OpenSans-Bold/OpenSans-Bold.woff") format("woff"),
+	url("../fonts/OpenSans-Bold/OpenSans-Bold.ttf") format("truetype");
+	font-style: normal;
+	font-weight: normal;
+}
+/* font-family: "OpenSansItalic"; */
+@font-face {
+	font-family: "OpenSansItalic";
+	src: url("../fonts/OpenSans-Italic/OpenSans-Italic.eot");
+	src: url("../fonts/OpenSans-Italic/OpenSans-Italic.eot?#iefix")format("embedded-opentype"),
+	url("../fonts/OpenSans-Italic/OpenSans-Italic.woff") format("woff"),
+	url("../fonts/OpenSans-Italic/OpenSans-Italic.ttf") format("truetype");
+	font-style: normal;
+	font-weight: normal;
+}
+/* font-family: "OpenSansLight"; */
+@font-face {
+	font-family: "OpenSansLight";
+	src: url("../fonts/OpenSans-Light/OpenSans-Light.eot");
+	src: url("../fonts/OpenSans-Light/OpenSans-Light.eot?#iefix")format("embedded-opentype"),
+	url("../fonts/OpenSans-Light/OpenSans-Light.woff") format("woff"),
+	url("../fonts/OpenSans-Light/OpenSans-Light.ttf") format("truetype");
+	font-style: normal;
+	font-weight: normal;
+}
+/* font-family: "OpenSansRegular"; */
+@font-face {
+	font-family: "OpenSansRegular";
+	src: url("../fonts/OpenSans-Regular/OpenSans-Regular.eot");
+	src: url("../fonts/OpenSans-Regular/OpenSans-Regular.eot?#iefix")format("embedded-opentype"),
+	url("../fonts/OpenSans-Regular/OpenSans.woff") format("woff"),
+	url("../fonts/OpenSans-Regular/OpenSans.ttf") format("truetype");
+	font-style: normal;
+	font-weight: normal;
+}
+/* font-family: "OpenSansSemibold"; */
+@font-face {
+	font-family: "OpenSansSemibold";
+	src: url("../fonts/OpenSans-Semibold/OpenSans-Semibold.eot");
+	src: url("../fonts/OpenSans-Semibold/OpenSans-Semibold.eot?#iefix")format("embedded-opentype"),
+	url("../fonts/OpenSans-Semibold/OpenSans-Semibold.woff") format("woff"),
+	url("../fonts/OpenSans-Semibold/OpenSans-Semibold.ttf") format("truetype");
+	font-style: normal;
+	font-weight: normal;
+}
